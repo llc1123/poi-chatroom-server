@@ -1,0 +1,23 @@
+{
+  "name": "poi-chatroom-server",
+  "version": "1.0.0",
+  "description": "poi plugin chatroom server",
+  "main": "index.js",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llc1123/poi-chatroom-server.git"
+  },
+  "author": "粒粒橙",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/llc1123/poi-chatroom-server/issues"
+  },
+  "homepage": "https://github.com/llc1123/poi-chatroom-server#readme"
+}
