@@ -28,6 +28,7 @@ io.sockets.on("connection", function(socket){
       trusted: "self",
       timestamp: Date.now()
     })
+    console.log(Date.now().toString() + '--' + socket.username + ': ' + data)
   });
 
   socket.on('add user', function (data) {
@@ -48,6 +49,7 @@ io.sockets.on("connection", function(socket){
       numUsers: numUsers,
       timestamp: Date.now()
     });
+    console.log(Date.now().toString() + '--' + socket.username + ' joined the chat, Current User: ' + numUsers)
   });
 
   socket.on('disconnect', function () {
@@ -60,6 +62,7 @@ io.sockets.on("connection", function(socket){
         numUsers: numUsers,
         timestamp: Date.now()
       });
+      console.log(Date.now().toString() + '--' + socket.username + ' left the chat, Current User: '+ numUsers)
     }
   });
 });
