@@ -37,7 +37,7 @@ io.sockets.on('connection', (socket) => {
 
     socket.username = data.name
     socket.trustedUser = data.real
-    numUsers = numUsers + 1
+    ++numUsers
     addedUser = true
     
     socket.emit('login', {
@@ -56,7 +56,7 @@ io.sockets.on('connection', (socket) => {
 
   socket.on('disconnect', () => {
     if (addedUser) {
-      numUsers = numUsers - 1
+      --numUsers
 
       socket.broadcast.emit('user left', {
         username: socket.username,
